@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apollo Dental Care - Future of Dental Care</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#57B5E7',
+secondary: '#E2F4FF'
+},
+borderRadius: {
+'none': '0px',
+'sm': '2px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.glass-effect {
+backdrop-filter: blur(10px);
+background: rgba(255, 255, 255, 0.8);
+}
+.hero-gradient {
+background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0) 100%);
+}
+</style>
+</head>
+<body class="bg-white">
+<header class="fixed w-full z-50 glass-effect">
+<div class="container mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<a href="#" class="flex items-center space-x-2 hover:scale-105 transition-transform duration-300" onclick="scrollToTop(event)">
+<span class="text-3xl font-['Pacifico'] text-primary">Apollo Dental</span>
+</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="#home" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+<a href="#services" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+<a href="#appointment" class="text-gray-700 hover:text-primary transition-colors">Book Appointment</a>
+<a href="#testimonials" class="text-gray-700 hover:text-primary transition-colors">Testimonials</a>
+<a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+</nav>
+<div class="hidden md:flex items-center space-x-4">
+<a href="tel:+977123456789" class="flex items-center space-x-2 text-gray-700">
+<i class="ri-phone-line w-5 h-5 flex items-center justify-center"></i>
+<span>+977 +061 411 209</span>
+</a>
+<button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap cursor-pointer">
+Book Now
+</button>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center cursor-pointer">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+</div>
+</header>
+<main>
+<section id="home" class="relative min-h-screen pt-20">
+<div class="absolute inset-0 z-0">
+<img src="https://public.readdy.ai/ai/img_res/5d136781eecafdebb5ff6b83da4e33e7.jpg" class="w-full h-full object-cover" alt="Dental Treatment">
+</div>
+<div class="relative z-10">
+<div class="container mx-auto px-6 py-20">
+<div class="max-w-2xl hero-gradient p-12 !rounded-xl">
+<h1 class="text-5xl font-bold text-gray-900 mb-6">Future of Dental Care is Here</h1>
+<p class="text-xl text-gray-700 mb-8">Experience advanced dental solutions with cutting-edge technology and expert care at Apollo Dental Care.</p>
+<div class="flex space-x-4">
+<button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap cursor-pointer">
+Book Appointment
+</button>
+<button class="bg-white text-primary border-2 border-primary px-8 py-3 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap cursor-pointer">
+Virtual Tour
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="services" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Discover our comprehensive range of dental services designed to give you the perfect smile you deserve.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white p-8 !rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<div class="w-16 h-16 bg-secondary !rounded-xl flex items-center justify-center mb-6">
+<i class="ri-heart-pulse-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-4">General Dentistry</h3>
+<p class="text-gray-600 mb-6">Comprehensive dental care including cleanings, fillings, and preventive treatments.</p>
+<a href="#" class="text-primary flex items-center hover:underline cursor-pointer">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<div class="bg-white p-8 !rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<div class="w-16 h-16 bg-secondary !rounded-xl flex items-center justify-center mb-6">
+<i class="ri-smile-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-4">Cosmetic Dentistry</h3>
+<p class="text-gray-600 mb-6">Transform your smile with veneers, whitening, and smile makeover services.</p>
+<a href="#" class="text-primary flex items-center hover:underline cursor-pointer">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<div class="bg-white p-8 !rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<div class="w-16 h-16 bg-secondary !rounded-xl flex items-center justify-center mb-6">
+<i class="ri-surgical-mask-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-4">Dental Implants</h3>
+<p class="text-gray-600 mb-6">Advanced implant solutions for missing teeth with natural-looking results.</p>
+<a href="#" class="text-primary flex items-center hover:underline cursor-pointer">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section id="appointment" class="py-20">
+<div class="container mx-auto px-6">
+<div class="max-w-4xl mx-auto bg-white shadow-xl !rounded-xl p-8">
+<h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Book Your Appointment</h2>
+<form id="appointmentForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-gray-700 mb-2">Full Name</label>
+<input type="text" class="w-full px-4 py-2 border border-gray-300 !rounded-button focus:outline-none focus:border-primary" required>
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Phone Number</label>
+<input type="tel" class="w-full px-4 py-2 border border-gray-300 !rounded-button focus:outline-none focus:border-primary" required>
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Email</label>
+<input type="email" class="w-full px-4 py-2 border border-gray-300 !rounded-button focus:outline-none focus:border-primary" required>
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Preferred Date</label>
+<input type="date" class="w-full px-4 py-2 border border-gray-300 !rounded-button focus:outline-none focus:border-primary" required>
+</div>
+<div class="md:col-span-2">
+<label class="block text-gray-700 mb-2">Service Type</label>
+<select class="w-full px-4 py-2 border border-gray-300 !rounded-button focus:outline-none focus:border-primary" required>
+<option value="">Select a service</option>
+<option value="general">General Dentistry</option>
+<option value="cosmetic">Cosmetic Dentistry</option>
+<option value="implants">Dental Implants</option>
+</select>
+</div>
+<div class="md:col-span-2">
+<label class="block text-gray-700 mb-2">Additional Notes</label>
+<textarea class="w-full px-4 py-2 border border-gray-300 !rounded-button focus:outline-none focus:border-primary" rows="4"></textarea>
+</div>
+<div class="md:col-span-2 text-center">
+<button type="submit" class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap cursor-pointer">
+Confirm Appointment
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<section id="testimonials" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Patient Testimonials</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">See what our patients say about their experience at Apollo Dental Care.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white p-8 !rounded-xl shadow-lg">
+<div class="flex items-center mb-6">
+<div class="flex text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Outstanding dental care! The staff is professional and caring. The facility is modern and clean. Highly recommend Apollo Dental Care!"</p>
+<div class="flex items-center">
+<div class="mr-4">
+<h4 class="font-bold text-gray-900">Ramraja Bastakoti</h4>
+<p class="text-gray-500 text-sm">Regular Patient</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 !rounded-xl shadow-lg">
+<div class="flex items-center mb-6">
+<div class="flex text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"The best dental experience I've ever had. The technology they use is impressive, and the results are amazing. Thank you, Apollo team!"</p>
+<div class="flex items-center">
+<div class="mr-4">
+<h4 class="font-bold text-gray-900">Ranjan Baral</h4>
+<p class="text-gray-500 text-sm">Cosmetic Patient</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 !rounded-xl shadow-lg">
+<div class="flex items-center mb-6">
+<div class="flex text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Incredible service and care. The staff made me feel comfortable throughout my implant procedure. Couldn't be happier with the results!"</p>
+<div class="flex items-center">
+<div class="mr-4">
+<h4 class="font-bold text-gray-900">Santosh Adhikari</h4>
+<p class="text-gray-500 text-sm">Implant Patient</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="contact" class="py-20">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div>
+<h2 class="text-4xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 bg-secondary !rounded-xl flex items-center justify-center flex-shrink-0">
+<i class="ri-map-pin-line text-primary text-xl"></i>
+</div>
+<div>
+<h3 class="font-bold text-gray-900 mb-1">Location</h3>
+<p class="text-gray-600">Pokhara-26, Kaski, Nepal</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 bg-secondary !rounded-xl flex items-center justify-center flex-shrink-0">
+<i class="ri-phone-line text-primary text-xl"></i>
+</div>
+<div>
+<h3 class="font-bold text-gray-900 mb-1">Phone</h3>
+<p class="text-gray-600">+977 +061 411209</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 bg-secondary !rounded-xl flex items-center justify-center flex-shrink-0">
+<i class="ri-mail-line text-primary text-xl"></i>
+</div>
+<div>
+<h3 class="font-bold text-gray-900 mb-1">Email</h3>
+<p class="text-gray-600">info@apollodentalcare.com</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 bg-secondary !rounded-xl flex items-center justify-center flex-shrink-0">
+<i class="ri-time-line text-primary text-xl"></i>
+</div>
+<div>
+<h3 class="font-bold text-gray-900 mb-1">Working Hours</h3>
+<p class="text-gray-600">Sunday - Friday: 9:00 AM - 7:00 PM</p>
+<p class="text-gray-600">Saturday: Closed</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="bg-white shadow-lg !rounded-xl p-8">
+<h3 class="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+<form class="space-y-6">
+<div>
+<label class="block text-gray-700 mb-2">Name</label>
+<input type="text" class="w-full px-4 py-2 border border-gray-300 !rounded-button focus:outline-none focus:border-primary" required>
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Email</label>
+<input type="email" class="w-full px-4 py-2 border border-gray-300 !rounded-button focus:outline-none focus:border-primary" required>
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Message</label>
+<textarea class="w-full px-4 py-2 border border-gray-300 !rounded-button focus:outline-none focus:border-primary" rows="4" required></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap cursor-pointer">
+Send Message
+</button>
+</form>
+</div>
+</div>
+</div>
+<div class="mt-12 h-96 !rounded-xl overflow-hidden">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3516.0401340211966!2d83.96411087537547!3d28.209887475862387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399595aad4e39825%3A0x8c5e1b2e1a8b951e!2sPokhara-26%2C%20Kaski%2C%20Nepal!5e0!3m2!1sen!2sus!4v1710921600000!5m2!1sen!2sus" 
+width="100%" 
+height="100%" 
+style="border:0;" 
+allowfullscreen="" 
+loading="lazy" 
+referrerpolicy="no-referrer-when-downgrade"
+class="w-full h-full object-cover">
+</iframe>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div>
+<a href="#" class="flex items-center space-x-2 mb-6">
+<span class="text-3xl font-['Pacifico'] text-white">Apollo</span>
+</a>
+<p class="text-gray-400">Leading the future of dental care with advanced technology and exceptional service.</p>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+<li><a href="#appointment" class="text-gray-400 hover:text-white transition-colors">Book Appointment</a></li>
+<li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Services</h4>
+<ul class="space-y-4">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">General Dentistry</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Cosmetic Dentistry</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Dental Implants</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Emergency Care</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Connect With Us</h4>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-gray-800 !rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 !rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 !rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 !rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center">
+<p class="text-gray-400">&copy; 2025 Apollo Dental Care Pvt. Ltd.. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+function scrollToTop(event) {
+const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+if (isHomePage) {
+event.preventDefault();
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+}
+}
+document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const formData = new FormData(this);
+const appointmentData = Object.fromEntries(formData.entries());
+const successMessage = document.createElement('div');
+successMessage.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 !rounded-xl shadow-lg';
+successMessage.textContent = 'Appointment booked successfully! We will contact you shortly.';
+document.body.appendChild(successMessage);
+setTimeout(() => {
+successMessage.remove();
+}, 3000);
+this.reset();
+});
+const mobileMenuButton = document.querySelector('.md\\:hidden');
+const nav = document.querySelector('nav');
+mobileMenuButton.addEventListener('click', () => {
+nav.classList.toggle('hidden');
+nav.classList.toggle('flex');
+nav.classList.toggle('flex-col');
+nav.classList.toggle('absolute');
+nav.classList.toggle('top-full');
+nav.classList.toggle('left-0');
+nav.classList.toggle('w-full');
+nav.classList.toggle('bg-white');
+nav.classList.toggle('p-4');
+nav.classList.toggle('shadow-lg');
+});
+</script>
+</body>
+</html>
